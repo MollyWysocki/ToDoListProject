@@ -9,20 +9,20 @@ import UIKit
 
 class ToDoTableViewController: UITableViewController {
 
-    var listOfToDo : [ToDoClass] = []
+    var listOfToDo : [ToDoCD] = []
     
-    
-    func createToDo() -> [ToDoClass] {
-        let swiftToDo = ToDoClass()
-        swiftToDo.description = "Learn Swift"
-        swiftToDo.important = true
-        
-        let dogToDo = ToDoClass()
-        dogToDo.description = "Walk the Dog"
-        
-        return [swiftToDo, dogToDo]
-    }
-    
+//
+//    func createToDo() -> [ToDoClass] {
+//        let swiftToDo = ToDoClass()
+//        swiftToDo.description = "Learn Swift"
+//        swiftToDo.important = true
+//
+//        let dogToDo = ToDoClass()
+//        dogToDo.description = "Walk the Dog"
+//
+//        return [swiftToDo, dogToDo]
+//    }
+//
     
     
     
@@ -32,7 +32,7 @@ class ToDoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listOfToDo = createToDo()
+    
         
     }
 
@@ -48,7 +48,7 @@ class ToDoTableViewController: UITableViewController {
        
         let eachToDo = listOfToDo[indexPath.row]
         
-        if eachToDo.important {
+        if eachToDo.importantInCD {
             cell.textLabel?.text = "❗️" + eachToDo.description
         }
        
